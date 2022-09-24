@@ -1,13 +1,12 @@
-<h1>Admin::Genres#edit</h1>
-<p>Find me in app/views/admin/genres/edit.html.erb</p>
+<!--<h1>Admin::Genres#edit</h1>-->
 
 <h1>ジャンル編集</h1>
 
-<%= form_with model: @admin_genres do |genre| %>
+<%= form_with model: @edit_admin_genres do |genre| %>
 
   <h4>ジャンル名</h4>
-  <%= f.genre_field :name %>
+  <%= genre.genre_field :name %>
 
-  <%= f.submit '変更を保存', class: "btn btn-success" %>
+  <%= genre.submit '変更を保存', class: "btn btn-success" %>
 
 <% end %>

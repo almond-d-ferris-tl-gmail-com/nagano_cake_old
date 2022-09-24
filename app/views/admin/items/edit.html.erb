@@ -1,9 +1,8 @@
-<h1>Admin::Items#edit</h1>
-<p>Find me in app/views/admin/items/edit.html.erb</p>
+<!--<h1>Admin::Items#edit</h1>-->
 
 <h1>商品編集</h1>
 
-<%= form_with model: @admin_item do |item| %>
+<%= form_with model: @edit_admin_item do |item| %>
 
   <h4>商品画像</h4>
   <%= item.file_field :image, accept: "image/*" %>

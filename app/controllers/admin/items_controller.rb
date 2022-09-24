@@ -1,7 +1,8 @@
 class Admin::ItemsController < ApplicationController
+
   def index
     #ページネーション
-    @admin_items = Items.page(params[:page])
+    @index_admin_item = Item.page(params[:page])
   end
 
   def new #エラー
@@ -11,18 +12,21 @@ class Admin::ItemsController < ApplicationController
 
   def create
     #データを受け取り新規登録するためのインスタンス作成
-    admin_items = Item.new(admin_items_params)
+    @create_admin_item = Item.new(admin_item_params)
     #データをデータベースに保存するためのsaveメソッド実行
     admin_items.save
     #トップ画面へリダイレクト
     redirect_to '/admin'
   end
 
-  def show
+  def show#同じアクション内で同じメソッドは使えない
+    @show_admin_item = Item.find(params[:id])
+    #@books = Book.all
+    #@user = @book.user
   end
 
   def edit
-    @admin_item = Item.find(params[:id])
+    @edit_admin_item = Item.find(params[:id])
   end
 
   def update

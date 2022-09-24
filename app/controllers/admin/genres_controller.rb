@@ -1,13 +1,13 @@
 class Admin::GenresController < ApplicationController
   def index
-    @admin_genres = Genre.all
+    @index_admin_genres = Genre.all
   end
 
   def create
   end
 
   def edit
-    @admin_genres = Genre.find(params[:id])
+    @edit_admin_genres = Genre.find(params[:id])
   end
 
   def update

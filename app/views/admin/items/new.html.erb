@@ -1,9 +1,8 @@
-<h1>Admin::Items#new</h1>
-<p>Find me in app/views/admin/items/new.html.erb</p>
+<!--Admin::Items#new-->
 
 <h1>商品新規登録</h1>
 
-<%= form_with model: @item, url:'/items' do |item| %>
+<%= form_with model: @@new_admin_item, url:'/items' do |item| %>
 
   <h4>商品画像</h4>
   <%= item.file_field :image, accept: "image/*" %>
